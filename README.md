@@ -10,6 +10,7 @@ Technologies Used:
 4. D3 JS
 5. Leaflet JS
 6. Twitter API
+7. HTML, CSS
 
 ###Screenshots
 ![Dashboard](visualize1.png)
