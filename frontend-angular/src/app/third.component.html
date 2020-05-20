@@ -1,0 +1,72 @@
+ <div class="jumbotron">
+        <h2><b> {{ survey }} </b></h2>
+    </div>
+
+    <div class="container" *ngIf="survey == 'Halifax Transit Tracker'; else elseBlock">
+    <p>	Transit Analysis</p>
+
+<div *ngIf="chart">
+     <canvas #canvas width="500" height="300"></canvas>
+     </div>
+
+     <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+<!--
+            <button onclick="update( {{ data }} )">Satisfied with the Governemnt Response</button>
+            <button onclick="update(data2)">Shortage in grocery items</button>-->
+
+    </div>
+    <ng-template #elseBlock><!--
+            <button onclick="update( {{ data  | safe }} )">Bus Route Satisfaction</button>
+            <button onclick="update(data2)">Frequency satisfaction</button>
+            <button onclick="update(data2)">Bus Cleaniness</button>-->
+            mm
+</ng-template>
+
+    <div class="row" style="padding-left: 5%;">
+        <div class="col-xs-6">
+            <!-- Div for the Graph-->
+            <div id="my_dataviz"></div>
+
+            <div class="row" style="margin-left: 10%;">
+               
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <!--Div for the map-->
+          <!--  <div id="mapid" style="height: 750px; width:600px;"></div>-->
+        </div>
+    </div>
+    <br>
+    <!--Div for the tweets -->
+    <div style="margin-left: 5%; margin-right: 5%;">
+        <div class="row" style="">
+            <div class="col-xs-6">
+                <h4>Tweets</h4>
+                <div class="card">
+                    <div class="card-body" style="width: 1200px">
+                    	<!--
+                        {% for text,url in tweet_info %}
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="{{ url }}"
+                                     style="height: 40px; width:40px;"/>
+                            </div>
+                                <div class="col-xs-6" style="margin-left: 2%;">
+                                    {{ text }}
+                                </div>
+                        </div>
+                                <br>
+                        {% endfor %}
+                    -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

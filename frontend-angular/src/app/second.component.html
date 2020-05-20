@@ -1,0 +1,76 @@
+<div style="width:864px;text-align: center; margin:0 auto;">
+
+</div>
+
+<div style="margin-top: 10px; ">
+
+	<h4>Active City Trackers</h4>
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Halifax Transit</h5>
+	        <p class="card-text">Survey about public transport and analysis.</p>
+	        <a href="" class="btn btn-primary" [routerLink]="['third', title]">See Details</a>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Healthcare</h5>
+	        <p class="card-text">Real-time healthcare analysis</p>
+	        <a href="" class="btn btn-primary">See Details</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</div>
+<br>
+<h4>Recent Problems Posted</h4>
+<div class="row">
+	
+  <div class="col-sm-6" *ngFor="let item of list_of_problems; let i = index">
+    <div class="card">
+      <div class="card-body">
+
+
+      	<div class="row">
+        <div class="col-xs-6">
+            <img src="assets/issue.png" style="height: 40px; width:40px;"/>
+        </div>
+        <div class="col-xs-6" style="margin-left: 3%;">
+                <h5 class="card-title">{{item['title']}}</h5>
+        <p class="card-text">{{item['description']}}</p>
+        <p class="card-text">Category: {{item['type']}}</p>
+        </div>
+    </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--<h2>test</h2>
+<p>{{title}}</p>
+{{position}}
+<p>You have clicked <span (click)="countClick()">this</span> {{clickcounter}} times. </p>
+
+<ng-template [ngIf] = "clickcounter > 4" [ngIfElse]="none2">
+	<p>The click counter <strong> Is greater than 4</strong>
+</ng-template>
+
+<ng-template #none2>
+	<p>Not greater than</p>
+	</ng-template>
+
+
+
+<ul *ngIf="food">
+	<li *ngFor="let abc of food">
+		<p>{{abc.hello}}
+		<a [routerLink]="['/third', abc.hello]">aaa </a>
+</ul>-->
