@@ -13,7 +13,7 @@ import re
 
 app = Flask(__name__)
 CLIENT_SECRET = ''
-app.secret_key = "cloud assignment"
+app.secret_key = "visualize"
 
 
 class CreateTwitterClient:
